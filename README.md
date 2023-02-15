@@ -31,5 +31,7 @@ MixPanel stats can be viewed here: https://mixpanel.com/trends/#report/ios_16/fr
 
 The range of devices capable of supporting iOS14 and above is also large.
 For iPhone this means that the iPhone6S and iPhone 6S Plus (both released in September 2015) along with the 1st generation iPhoneSE (released in March 2016) are the oldest devices that will be supported.
+
 For iPad this means that the 4th generation iPad Mini (released September 2015) is the oldest iPad Mini that will be supported. The 2nd generation iPad Air (released October 2014) will be the oldest iPad Air supported. The 1st generation iPad Pro in all sizes (12.9 inch released November 2015, 9.7 inch released March 2016) will be the oldest iPad Pro devices supported.
+
 Additionally the 7th generation iPod Touch (released May 2019) will also be supported.
