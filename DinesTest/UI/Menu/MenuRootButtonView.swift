@@ -19,7 +19,6 @@ struct MenuRootButtonView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(minWidth: 0, idealWidth: 250, maxWidth: 300, minHeight: 0, idealHeight: 250, maxHeight: 300, alignment: .center)
-                    .cornerRadius(5.0)
                     .padding()
                 Text(menuOptions.title)
                     .padding(.leading)

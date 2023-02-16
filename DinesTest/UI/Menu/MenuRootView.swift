@@ -12,15 +12,26 @@ struct MenuRootView: View {
         ZStack {
             ScrollView(.vertical, showsIndicators: true) {
                 VStack {
-                    MenuRootButtonView(menuOptions: MenuController.shared.getRootMenuDetails(menuSelected: .food))
-                        .cornerRadius(10.0)
-                        .padding()
-                    MenuRootButtonView(menuOptions: MenuController.shared.getRootMenuDetails(menuSelected: .drink))
-                        .cornerRadius(10.0)
-                        .padding()
-                    MenuRootButtonView(menuOptions: MenuController.shared.getRootMenuDetails(menuSelected: .desert))
-                        .cornerRadius(10.0)
-                        .padding()
+                    NavigationLink(destination: MenuListView(menuSelected: .food)) {
+                        MenuRootButtonView(menuOptions: MenuController.shared.getRootMenuDetails(menuSelected: .food))
+                            .cornerRadius(Constants.numbers.cornerRadius)
+                            .padding()
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    NavigationLink(destination: MenuListView(menuSelected: .drink)) {
+                        MenuRootButtonView(menuOptions: MenuController.shared.getRootMenuDetails(menuSelected: .drink))
+                            .cornerRadius(Constants.numbers.cornerRadius)
+                            .padding()
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    NavigationLink(destination: MenuListView(menuSelected: .desert)) {
+                        MenuRootButtonView(menuOptions: MenuController.shared.getRootMenuDetails(menuSelected: .desert))
+                            .cornerRadius(Constants.numbers.cornerRadius)
+                            .padding()
+                    }
+                    .buttonStyle(PlainButtonStyle())
                     
                 }
             }

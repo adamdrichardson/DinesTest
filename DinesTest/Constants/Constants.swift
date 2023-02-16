@@ -14,4 +14,8 @@ struct Constants {
         static let deserts = URL(string: "https://free-food-menus-api-production.up.railway.app/desserts")!
         static let drinks = URL(string: "https://free-food-menus-api-production.up.railway.app/drinks")!
     }
+    
+    struct numbers {
+        static let cornerRadius = 10.0
+    }
 }
