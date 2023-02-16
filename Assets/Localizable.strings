@@ -5,3 +5,4 @@
   Created by Adam Richardson on 16/02/2023.
   
 */
+"api.error" = "There was an error with the API: ";
