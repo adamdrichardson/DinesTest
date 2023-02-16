@@ -9,3 +9,6 @@
 "label.menuView.title" = "Menu";
 "label.basketView.title" = "Basket";
 "label.orderView.title" = "Order History";
+"label.menuView.food.title" = "Food";
+"label.menuView.drink.title" = "Drinks";
+"label.menuView.dessert.title" = "Desserts";

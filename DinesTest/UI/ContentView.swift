@@ -27,14 +27,14 @@ struct ContentView: View {
             
             BasketView()
                 .tabItem {
-                    Image(systemName: "basket")
+                    Image(systemName: "cart")
                     Text("label.basketView.title")
                 }
                 .tag(1)
             
             OrderHistoryView()
                 .tabItem {
-                    Image(systemName: "list.clipboard")
+                    Image(systemName: "list.star")
                     Text("label.orderView.title")
                 }
                 .tag(2)
