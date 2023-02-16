@@ -20,3 +20,4 @@
 "alert.addItem.continue" = "Continue shopping";
 "alert.addItem.basket" = "Go to my Basket";
 "label.basket.button.checkout" = "CHeckout";
+"label.basket.total" = "Total Price: £";

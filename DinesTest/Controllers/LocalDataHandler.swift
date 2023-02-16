@@ -43,4 +43,48 @@ class LocalDataHandler {
         
         self.saveContext()
     }
+    
+    func getBasketQuantity() -> Int {
+        let fetchRequest = BasketItem.fetchRequest()
+        
+        moc = self.getManagedContext()
+        
+        do {
+            let items = try moc.fetch(fetchRequest)
+            
+            if items.count > 0 {
+                let quantityTotal = Int(items.reduce(0){$0 + ($1.quantity) })
+                return quantityTotal
+            } else {
+                print("There are no items in the basket")
+                return 0
+            }
+            
+        } catch {
+            print("There was an error getting the basket items")
+            return 0
+        }
+    }
+    
+    func getBasketTotal() -> Double {
+        let fetchRequest = BasketItem.fetchRequest()
+        
+        moc = self.getManagedContext()
+        
+        do {
+            let items = try moc.fetch(fetchRequest)
+            
+            if items.count > 0 {
+                let priceTotal = items.reduce(0){$0 + ($1.totalPrice)}
+                return priceTotal
+            } else {
+                print("there are no items in the basket")
+                return 0.0
+            }
+        } catch {
+            //This would be a great place to log with analytics or Crashlytics
+            print("There was an error getting the basket items")
+            return 0.0
+        }
+    }
 }

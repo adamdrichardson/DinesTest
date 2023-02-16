@@ -23,6 +23,10 @@ struct BasketView: View {
                     }.onDelete(perform: deleteItem)
                 }
                 
+                Text(BasketController.shared.getBasketTotalString(items: items))
+                    .multilineTextAlignment(.leading)
+                    .padding()
+                
                 Button(action: {
                     //TODO: checkout
                 }, label: {
