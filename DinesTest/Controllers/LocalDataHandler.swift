@@ -61,6 +61,7 @@ class LocalDataHandler {
             }
             
         } catch {
+            //This would be a great place to log with analytics or Crashlytics
             print("There was an error getting the basket items")
             return 0
         }
@@ -86,5 +87,37 @@ class LocalDataHandler {
             print("There was an error getting the basket items")
             return 0.0
         }
+    }
+    
+    func emptyBasket() {
+        let fetchRequest = BasketItem.fetchRequest()
+        
+        moc = self.getManagedContext()
+        
+        do {
+            let items = try moc.fetch(fetchRequest)
+            
+            for item in items {
+                moc.delete(item)
+            }
+            self.saveContext()
+        } catch {
+            //This would be a great place to log with analytics or Crashlytics
+            print("There was an error getting the basket items")
+        }
+    }
+    
+    func saveOrder() {
+        moc = self.getManagedContext()
+        
+        let orderItem = OrderItem()
+        orderItem.id = UUID()
+        orderItem.itemTotal = Int16(self.getBasketQuantity())
+        orderItem.totalPrice = self.getBasketTotal()
+        orderItem.timeStamp = Date()
+        
+        self.saveContext()
+        
+        self.emptyBasket()
     }
 }
