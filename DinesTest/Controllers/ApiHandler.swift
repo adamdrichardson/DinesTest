@@ -24,11 +24,13 @@ final class ApiHandler {
             var errorString: String?
             var menuItemArray: [MenuItem]?
             if let data = data {
+                print("we got some data back")
                 //TODO parse the url response
                 menuItemArray = self.handleApiSuccess(data: data)
                 errorString = nil
             }
             if let error = error {
+                print("we got an error message: \(error)")
                 //TODO error handling here
                 errorString = self.handleApiError(error: error)
                 menuItemArray = nil
@@ -74,6 +76,7 @@ final class ApiHandler {
         
         do {
             let menuItemArray = try decoder.decode([MenuItem].self, from: data)
+            print("menuItemArray: \(menuItemArray)")
             return menuItemArray
         } catch {
             print("error decoding the json")

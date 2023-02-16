@@ -37,4 +37,12 @@ final class MenuController {
             return NSLocalizedString("label.menuView.drink.title", comment: "")
         }
     }
+    
+    func getPriceString(price: Double?) -> String {
+        print("getPriceString")
+        guard let itemPrice = price else {
+            return "Unknown"
+        }
+        return "£" + String(itemPrice)
+    }
 }

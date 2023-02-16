@@ -22,8 +22,9 @@ struct MenuResponse: Codable {
  
  - Note: All items have been made optional so that if the API changes or fails to return on or more of the variables for some reason then the app wont be expecting the variable and therefore will not crash when decoding
  */
-struct MenuItem: Codable {
-    var id: String?
+public struct MenuItem: Codable, Identifiable, Hashable {
+    public let id = UUID()
+    var itemId: String?
     var imageString: String?
     var name: String?
     var description: String?
@@ -31,8 +32,8 @@ struct MenuItem: Codable {
     var rate: Int?
     var location: String?
     
-    private enum CodingKeys: String, CodingKey {
-        case id = "id"
+    enum CodingKeys: String, CodingKey {
+        case itemId = "id"
         case imageString = "img"
         case name = "name"
         case description = "dsc"

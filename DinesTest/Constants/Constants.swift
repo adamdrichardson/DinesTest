@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 struct Constants {
@@ -17,5 +18,9 @@ struct Constants {
     
     struct numbers {
         static let cornerRadius = 10.0
+    }
+    
+    struct colours {
+        static let cardBgColour = Color(red: 19/255, green: 13/255, blue: 64/255)
     }
 }

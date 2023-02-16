@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-final class MenuVM: ObservableObject {
+class MenuVM: ObservableObject {
     @Published var items = [MenuItem]()
     
     init(menuSelection: MenuSelection) {
@@ -19,6 +19,7 @@ final class MenuVM: ObservableObject {
         ApiHandler.shared.getRemoteMenu(menuSelection: menuSelection, completion: { [weak self] (menuResponse) in
             if let errorMessage = menuResponse.errorString {
                 //TODO: Do something with the error message
+                print("there was an error: \(errorMessage)")
             }
             
             if let menuItems = menuResponse.menutItems {
