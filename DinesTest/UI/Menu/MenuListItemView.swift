@@ -17,7 +17,7 @@ struct MenuListItemView: View {
             VStack {
                 HStack {
                     Text(menuItem.description ?? "")
-                        .foregroundColor(.white)
+                        .foregroundColor(Constants.colours.menuItemTextColour)
                         .padding(.leading)
                         .padding(.top)
                         .padding(.trailing)
@@ -28,10 +28,10 @@ struct MenuListItemView: View {
                     ItemImageView(urlString: menuItem.imageString ?? "")
                                         .padding()
                     Text(MenuController.shared.getPriceString(price: menuItem.price))
-                        .foregroundColor(.white)
+                        .foregroundColor(Constants.colours.menuItemTextColour)
                         .padding()
                     Image(systemName: "chevron.right")
-                        .foregroundColor(.white)
+                        .foregroundColor(Constants.colours.menuItemTextColour)
                         .padding()
                 }
             }
