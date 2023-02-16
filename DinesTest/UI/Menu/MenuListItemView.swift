@@ -16,7 +16,7 @@ struct MenuListItemView: View {
             Constants.colours.cardBgColour
             VStack {
                 HStack {
-                    Text(menuItem.name ?? "")
+                    Text(menuItem.description ?? "")
                         .foregroundColor(.white)
                         .padding(.leading)
                         .padding(.top)
