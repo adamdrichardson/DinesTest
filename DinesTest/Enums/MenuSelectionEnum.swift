@@ -7,6 +7,11 @@
 
 import Foundation
 
+/**
+ Enum for menu selection
+ 
+ - Note: The options are food, desert and drink
+ */
 enum MenuSelection {
     case food
     case desert

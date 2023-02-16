@@ -22,6 +22,10 @@
 		029EFDFA299D51DF00177892 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDF8299D51DF00177892 /* Constants.swift */; };
 		029EFDFD299DA84100177892 /* MenuSelectionEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDFC299DA84100177892 /* MenuSelectionEnum.swift */; };
 		029EFDFE299DA84100177892 /* MenuSelectionEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDFC299DA84100177892 /* MenuSelectionEnum.swift */; };
+		029EFE01299DC35000177892 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029EFE00299DC35000177892 /* Localizable.strings */; };
+		029EFE02299DC35000177892 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029EFE00299DC35000177892 /* Localizable.strings */; };
+		029EFE04299DC4E900177892 /* MenuObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE03299DC4E900177892 /* MenuObject.swift */; };
+		029EFE05299DC4E900177892 /* MenuObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE03299DC4E900177892 /* MenuObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,8 @@
 		029EFDF4299D509D00177892 /* ApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 		029EFDF8299D51DF00177892 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		029EFDFC299DA84100177892 /* MenuSelectionEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionEnum.swift; sourceTree = "<group>"; };
+		029EFE00299DC35000177892 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		029EFE03299DC4E900177892 /* MenuObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 		029EFDB5299D409F00177892 = {
 			isa = PBXGroup;
 			children = (
+				029EFDFF299DC31700177892 /* Assets */,
 				029EFDC0299D40A000177892 /* DinesTest */,
 				029EFDD6299D40A600177892 /* DinesTestTests */,
 				029EFDE0299D40A700177892 /* DinesTestUITests */,
@@ -114,7 +121,6 @@
 				029EFDF1299D428300177892 /* Data_Models */,
 				029EFDF0299D427B00177892 /* UI */,
 				029EFDC1299D40A000177892 /* DinesTestApp.swift */,
-				029EFDC5299D40A600177892 /* Assets.xcassets */,
 				029EFDC7299D40A600177892 /* Preview Content */,
 			);
 			path = DinesTest;
@@ -156,6 +162,7 @@
 		029EFDF1299D428300177892 /* Data_Models */ = {
 			isa = PBXGroup;
 			children = (
+				029EFE03299DC4E900177892 /* MenuObject.swift */,
 			);
 			path = Data_Models;
 			sourceTree = "<group>";
@@ -191,6 +198,15 @@
 				029EFDFC299DA84100177892 /* MenuSelectionEnum.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		029EFDFF299DC31700177892 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				029EFDC5299D40A600177892 /* Assets.xcassets */,
+				029EFE00299DC35000177892 /* Localizable.strings */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				029EFDC9299D40A600177892 /* Preview Assets.xcassets in Resources */,
+				029EFE01299DC35000177892 /* Localizable.strings in Resources */,
 				029EFDC6299D40A600177892 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029EFE02299DC35000177892 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +348,7 @@
 				029EFDC4299D40A000177892 /* ContentView.swift in Sources */,
 				029EFDC2299D40A000177892 /* DinesTestApp.swift in Sources */,
 				029EFDF9299D51DF00177892 /* Constants.swift in Sources */,
+				029EFE04299DC4E900177892 /* MenuObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +359,7 @@
 				029EFDD8299D40A600177892 /* DinesTestTests.swift in Sources */,
 				029EFDF6299D509D00177892 /* ApiHandler.swift in Sources */,
 				029EFDFE299DA84100177892 /* MenuSelectionEnum.swift in Sources */,
+				029EFE05299DC4E900177892 /* MenuObject.swift in Sources */,
 				029EFDFA299D51DF00177892 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
