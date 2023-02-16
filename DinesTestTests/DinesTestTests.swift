@@ -23,7 +23,7 @@ class DinesTestTests: XCTestCase {
         let expectedResult = Constants.urls.bestFoods
         let menuSelection: MenuSelection = .food
         
-        let result = ApiHandler().getEndpoint(menuSelection: menuSelection)
+        let result = ApiHandler.shared.getEndpoint(menuSelection: menuSelection)
         
         XCTAssertTrue(result == expectedResult)
     }
@@ -32,7 +32,7 @@ class DinesTestTests: XCTestCase {
         let expectedResult = Constants.urls.drinks
         let menuSelection: MenuSelection = .drink
         
-        let result = ApiHandler().getEndpoint(menuSelection: menuSelection)
+        let result = ApiHandler.shared.getEndpoint(menuSelection: menuSelection)
         
         XCTAssertTrue(result == expectedResult)
     }
@@ -41,7 +41,7 @@ class DinesTestTests: XCTestCase {
         let expectedResult = Constants.urls.deserts
         let menuSelection: MenuSelection = .desert
         
-        let result = ApiHandler().getEndpoint(menuSelection: menuSelection)
+        let result = ApiHandler.shared.getEndpoint(menuSelection: menuSelection)
         
         XCTAssertTrue(result == expectedResult)
     }

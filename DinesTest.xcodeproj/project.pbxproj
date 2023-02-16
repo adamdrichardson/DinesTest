@@ -32,6 +32,8 @@
 		029EFE0E299DD5B500177892 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE0C299DD5B500177892 /* BasketView.swift */; };
 		029EFE10299DD5C400177892 /* OrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE0F299DD5C400177892 /* OrderHistoryView.swift */; };
 		029EFE11299DD5C400177892 /* OrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE0F299DD5C400177892 /* OrderHistoryView.swift */; };
+		029EFE13299DD69B00177892 /* MenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE12299DD69B00177892 /* MenuVM.swift */; };
+		029EFE14299DD69B00177892 /* MenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE12299DD69B00177892 /* MenuVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,7 @@
 		029EFE06299DD56F00177892 /* MenuRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRootView.swift; sourceTree = "<group>"; };
 		029EFE0C299DD5B500177892 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		029EFE0F299DD5C400177892 /* OrderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderHistoryView.swift; path = DinesTest/UI/Basket/OrderHistoryView.swift; sourceTree = SOURCE_ROOT; };
+		029EFE12299DD69B00177892 /* MenuVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				029EFDF4299D509D00177892 /* ApiHandler.swift */,
+				029EFE12299DD69B00177892 /* MenuVM.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -381,6 +385,7 @@
 				029EFDCB299D40A600177892 /* Persistence.swift in Sources */,
 				029EFE07299DD56F00177892 /* MenuRootView.swift in Sources */,
 				029EFE10299DD5C400177892 /* OrderHistoryView.swift in Sources */,
+				029EFE13299DD69B00177892 /* MenuVM.swift in Sources */,
 				029EFDCE299D40A600177892 /* DinesTest.xcdatamodeld in Sources */,
 				029EFDFD299DA84100177892 /* MenuSelectionEnum.swift in Sources */,
 				029EFDF5299D509D00177892 /* ApiHandler.swift in Sources */,
@@ -396,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				029EFDD8299D40A600177892 /* DinesTestTests.swift in Sources */,
+				029EFE14299DD69B00177892 /* MenuVM.swift in Sources */,
 				029EFE08299DD56F00177892 /* MenuRootView.swift in Sources */,
 				029EFE11299DD5C400177892 /* OrderHistoryView.swift in Sources */,
 				029EFDF6299D509D00177892 /* ApiHandler.swift in Sources */,

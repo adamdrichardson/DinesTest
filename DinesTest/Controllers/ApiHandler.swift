@@ -12,6 +12,8 @@ import Foundation
  */
 final class ApiHandler {
     
+    static let shared = ApiHandler()
+    
     /**
      Function to get the menu from the remote API
      
