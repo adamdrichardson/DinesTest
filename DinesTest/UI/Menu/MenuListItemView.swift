@@ -13,7 +13,6 @@ struct MenuListItemView: View {
     
     var body: some View {
         ZStack {
-            Constants.colours.cardBgColour
             VStack {
                 HStack {
                     Text(menuItem.description ?? "")
@@ -28,9 +27,6 @@ struct MenuListItemView: View {
                     ItemImageView(urlString: menuItem.imageString ?? "")
                                         .padding()
                     Text(MenuController.shared.getPriceString(price: menuItem.price))
-                        .foregroundColor(Constants.colours.menuItemTextColour)
-                        .padding()
-                    Image(systemName: "chevron.right")
                         .foregroundColor(Constants.colours.menuItemTextColour)
                         .padding()
                 }

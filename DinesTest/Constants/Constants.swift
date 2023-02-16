@@ -22,6 +22,8 @@ struct Constants {
     
     struct colours {
         static let cardBgColour = Color(red: 19/255, green: 13/255, blue: 64/255)
-        static let menuItemTextColour = Color.white
+        static let menuItemTextColour = Color.black
+        static let buttonBgColour = Color.blue
+        static let buttonTextColour = Color.white
     }
 }

@@ -48,6 +48,8 @@
 		029EFE29299E4F9D00177892 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE27299E4F9C00177892 /* ImageLoader.swift */; };
 		029EFE2C299E505000177892 /* ItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE2B299E505000177892 /* ItemImageView.swift */; };
 		029EFE2D299E505000177892 /* ItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE2B299E505000177892 /* ItemImageView.swift */; };
+		029EFE2F299E6CFC00177892 /* MenuDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE2E299E6CFC00177892 /* MenuDetailView.swift */; };
+		029EFE30299E6CFD00177892 /* MenuDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE2E299E6CFC00177892 /* MenuDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,7 @@
 		029EFE21299E49FC00177892 /* MenuListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListItemView.swift; sourceTree = "<group>"; };
 		029EFE27299E4F9C00177892 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		029EFE2B299E505000177892 /* ItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageView.swift; sourceTree = "<group>"; };
+		029EFE2E299E6CFC00177892 /* MenuDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +260,7 @@
 				029EFE15299E374E00177892 /* MenuListView.swift */,
 				029EFE18299E38CE00177892 /* MenuRootButtonView.swift */,
 				029EFE21299E49FC00177892 /* MenuListItemView.swift */,
+				029EFE2E299E6CFC00177892 /* MenuDetailView.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -419,6 +423,7 @@
 			files = (
 				029EFE0D299DD5B500177892 /* BasketView.swift in Sources */,
 				029EFDCB299D40A600177892 /* Persistence.swift in Sources */,
+				029EFE2F299E6CFC00177892 /* MenuDetailView.swift in Sources */,
 				029EFE07299DD56F00177892 /* MenuRootView.swift in Sources */,
 				029EFE1F299E3AA200177892 /* MenuOptionDetailsObject.swift in Sources */,
 				029EFE10299DD5C400177892 /* OrderHistoryView.swift in Sources */,
@@ -443,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029EFE30299E6CFD00177892 /* MenuDetailView.swift in Sources */,
 				029EFDD8299D40A600177892 /* DinesTestTests.swift in Sources */,
 				029EFE17299E374F00177892 /* MenuListView.swift in Sources */,
 				029EFE14299DD69B00177892 /* MenuVM.swift in Sources */,

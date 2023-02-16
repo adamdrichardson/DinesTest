@@ -19,6 +19,7 @@ struct ContentView: View {
                 MenuRootView()
                     .navigationTitle("label.menuView.title")
             }
+            .navigationViewStyle(.stack)
             .tabItem{
                 Image(systemName: "menucard")
                 Text("label.menuView.title")

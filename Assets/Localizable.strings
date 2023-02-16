@@ -12,3 +12,10 @@
 "label.menuView.food.title" = "Food";
 "label.menuView.drink.title" = "Drinks";
 "label.menuView.dessert.title" = "Desserts";
+"label.itemDetail.ideal.body" = "In an ideal world we would have a description or ingredients and allergen advice from the API to display here.";
+"label.itemDetail.price" = "Price: ";
+"label.itemDetail.button.add.title" = "Add to Basket";
+"alert.addItem.title" = "Added to your Basket";
+"alert.addItem.body" = " was added to your basket at a cost of: ";
+"alert.addItem.continue" = "Continue shopping";
+"alert.addItem.basket" = "Go to my Basket";

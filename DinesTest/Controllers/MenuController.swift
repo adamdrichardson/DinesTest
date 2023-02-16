@@ -45,4 +45,12 @@ final class MenuController {
         }
         return "£" + String(itemPrice)
     }
+    
+    func getDetailPriceString(price: Double?) -> String {
+        return NSLocalizedString("label.itemDetail.price", comment: "") + self.getPriceString(price: price)
+    }
+    
+    func getAddItemAlertString(menuItem: MenuItem) -> String {
+        return (menuItem.description ?? "") + NSLocalizedString("alert.addItem.body", comment: "") + self.getPriceString(price: menuItem.price)
+    }
 }

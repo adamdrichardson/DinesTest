@@ -19,8 +19,12 @@ struct MenuListView: View {
     
     var body: some View {
         List(menu.items, id: \.self) { item in
-            MenuListItemView(menuItem: item)
-                .cornerRadius(Constants.numbers.cornerRadius)
+            NavigationLink(destination: MenuDetailView(menuItem: item)) {
+                MenuListItemView(menuItem: item)
+                    .cornerRadius(Constants.numbers.cornerRadius)
+            }
+            .buttonStyle(PlainButtonStyle())
+            
         }
         .navigationBarTitle(MenuController.shared.getRootMenuTitle(menuSelected: menuOption))
     }
