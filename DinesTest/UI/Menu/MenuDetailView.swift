@@ -32,6 +32,7 @@ struct MenuDetailView: View {
                     Text(MenuController.shared.getDetailPriceString(price: menuItem.price))
                         .padding()
                     Button(action: {
+                        LocalDataHandler.shared.addNewBasketItem(menuItem: menuItem, quantity: 1)
                         self.showingAlert = true
                     }, label: {
                         Text("label.itemDetail.button.add.title")

@@ -8,8 +8,40 @@
 import SwiftUI
 
 struct BasketView: View {
+    
+    @FetchRequest(entity: BasketItem.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \BasketItem.name, ascending: true)]
+    ) var items: FetchedResults<BasketItem>
+    
+    
+    
     var body: some View {
-        Text("Basket View")
+        ZStack {
+            VStack {
+                List {
+                    ForEach(items, id: \.id) {
+                        BasketRowView(item: $0)
+                    }.onDelete(perform: deleteItem)
+                }
+                
+                Button(action: {
+                    //TODO: checkout
+                }, label: {
+                    Text("label.basket.button.checkout")
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(Constants.colours.buttonTextColour)
+                        .background(Constants.colours.buttonBgColour)
+                        .cornerRadius(Constants.numbers.cornerRadius)
+                })
+            }
+        }
+    }
+    
+    func deleteItem(at offsets: IndexSet) {
+        offsets.forEach { index in
+            let item = self.items[index]
+            LocalDataHandler.shared.deleteBasketItem(item: item)
+        }
     }
 }
 

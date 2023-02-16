@@ -52,6 +52,14 @@
 		029EFE30299E6CFD00177892 /* MenuDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE2E299E6CFC00177892 /* MenuDetailView.swift */; };
 		029EFE32299E842700177892 /* DetailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE31299E842200177892 /* DetailImageView.swift */; };
 		029EFE33299E842800177892 /* DetailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE31299E842200177892 /* DetailImageView.swift */; };
+		029EFE35299E98C800177892 /* LocalDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE34299E98C700177892 /* LocalDataHandler.swift */; };
+		029EFE36299E98C900177892 /* LocalDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE34299E98C700177892 /* LocalDataHandler.swift */; };
+		029EFE3B299E9BA200177892 /* MathsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE3A299E9BA200177892 /* MathsHelper.swift */; };
+		029EFE3C299E9BA200177892 /* MathsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE3A299E9BA200177892 /* MathsHelper.swift */; };
+		029EFE3E299E9F5900177892 /* BasketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE3D299E9F5900177892 /* BasketController.swift */; };
+		029EFE3F299E9F5900177892 /* BasketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE3D299E9F5900177892 /* BasketController.swift */; };
+		029EFE41299EA13B00177892 /* BasketRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE40299EA13B00177892 /* BasketRowView.swift */; };
+		029EFE42299EA13B00177892 /* BasketRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE40299EA13B00177892 /* BasketRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +110,10 @@
 		029EFE2B299E505000177892 /* ItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageView.swift; sourceTree = "<group>"; };
 		029EFE2E299E6CFC00177892 /* MenuDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailView.swift; sourceTree = "<group>"; };
 		029EFE31299E842200177892 /* DetailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageView.swift; sourceTree = "<group>"; };
+		029EFE34299E98C700177892 /* LocalDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataHandler.swift; sourceTree = "<group>"; };
+		029EFE3A299E9BA200177892 /* MathsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathsHelper.swift; sourceTree = "<group>"; };
+		029EFE3D299E9F5900177892 /* BasketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketController.swift; sourceTree = "<group>"; };
+		029EFE40299EA13B00177892 /* BasketRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +239,9 @@
 				029EFE12299DD69B00177892 /* MenuVM.swift */,
 				029EFE1B299E3A0400177892 /* MenuController.swift */,
 				029EFE27299E4F9C00177892 /* ImageLoader.swift */,
+				029EFE34299E98C700177892 /* LocalDataHandler.swift */,
+				029EFE3A299E9BA200177892 /* MathsHelper.swift */,
+				029EFE3D299E9F5900177892 /* BasketController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -272,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				029EFE0C299DD5B500177892 /* BasketView.swift */,
+				029EFE40299EA13B00177892 /* BasketRowView.swift */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -429,8 +445,10 @@
 				029EFDCB299D40A600177892 /* Persistence.swift in Sources */,
 				029EFE2F299E6CFC00177892 /* MenuDetailView.swift in Sources */,
 				029EFE07299DD56F00177892 /* MenuRootView.swift in Sources */,
+				029EFE35299E98C800177892 /* LocalDataHandler.swift in Sources */,
 				029EFE1F299E3AA200177892 /* MenuOptionDetailsObject.swift in Sources */,
 				029EFE10299DD5C400177892 /* OrderHistoryView.swift in Sources */,
+				029EFE3B299E9BA200177892 /* MathsHelper.swift in Sources */,
 				029EFE13299DD69B00177892 /* MenuVM.swift in Sources */,
 				029EFDCE299D40A600177892 /* DinesTest.xcdatamodeld in Sources */,
 				029EFE32299E842700177892 /* DetailImageView.swift in Sources */,
@@ -438,10 +456,12 @@
 				029EFE22299E49FC00177892 /* MenuListItemView.swift in Sources */,
 				029EFE28299E4F9D00177892 /* ImageLoader.swift in Sources */,
 				029EFE19299E38CE00177892 /* MenuRootButtonView.swift in Sources */,
+				029EFE3E299E9F5900177892 /* BasketController.swift in Sources */,
 				029EFDF5299D509D00177892 /* ApiHandler.swift in Sources */,
 				029EFDC4299D40A000177892 /* ContentView.swift in Sources */,
 				029EFE1C299E3A0400177892 /* MenuController.swift in Sources */,
 				029EFE16299E374E00177892 /* MenuListView.swift in Sources */,
+				029EFE41299EA13B00177892 /* BasketRowView.swift in Sources */,
 				029EFDC2299D40A000177892 /* DinesTestApp.swift in Sources */,
 				029EFDF9299D51DF00177892 /* Constants.swift in Sources */,
 				029EFE04299DC4E900177892 /* MenuObject.swift in Sources */,
@@ -456,9 +476,11 @@
 				029EFE30299E6CFD00177892 /* MenuDetailView.swift in Sources */,
 				029EFDD8299D40A600177892 /* DinesTestTests.swift in Sources */,
 				029EFE17299E374F00177892 /* MenuListView.swift in Sources */,
+				029EFE3F299E9F5900177892 /* BasketController.swift in Sources */,
 				029EFE14299DD69B00177892 /* MenuVM.swift in Sources */,
 				029EFE08299DD56F00177892 /* MenuRootView.swift in Sources */,
 				029EFE1D299E3A0400177892 /* MenuController.swift in Sources */,
+				029EFE42299EA13B00177892 /* BasketRowView.swift in Sources */,
 				029EFE11299DD5C400177892 /* OrderHistoryView.swift in Sources */,
 				029EFE29299E4F9D00177892 /* ImageLoader.swift in Sources */,
 				029EFDF6299D509D00177892 /* ApiHandler.swift in Sources */,
@@ -466,11 +488,13 @@
 				029EFE23299E49FC00177892 /* MenuListItemView.swift in Sources */,
 				029EFE20299E3AA200177892 /* MenuOptionDetailsObject.swift in Sources */,
 				029EFE05299DC4E900177892 /* MenuObject.swift in Sources */,
+				029EFE3C299E9BA200177892 /* MathsHelper.swift in Sources */,
 				029EFE2D299E505000177892 /* ItemImageView.swift in Sources */,
 				029EFE1A299E38CE00177892 /* MenuRootButtonView.swift in Sources */,
 				029EFE0E299DD5B500177892 /* BasketView.swift in Sources */,
 				029EFDFA299D51DF00177892 /* Constants.swift in Sources */,
 				029EFE33299E842800177892 /* DetailImageView.swift in Sources */,
+				029EFE36299E98C900177892 /* LocalDataHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
