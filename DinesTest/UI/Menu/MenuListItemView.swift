@@ -24,7 +24,8 @@ struct MenuListItemView: View {
                     Spacer()
                 }
                 HStack {
-                    ItemImageView(urlString: menuItem.imageString ?? "")
+                    ItemImageView(menuItem.imageString ?? "")
+                        .frame(minWidth: 100)
                                         .padding()
                     Text(MenuController.shared.getPriceString(price: menuItem.price))
                         .foregroundColor(Constants.colours.menuItemTextColour)

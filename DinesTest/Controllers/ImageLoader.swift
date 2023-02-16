@@ -9,19 +9,32 @@ import Foundation
 import SwiftUI
 
 final class ImageLoader: ObservableObject {
-    @Published var image: UIImage = UIImage()
+    @Published var imageData = Data()
         
-    func loadImage(for urlString: String) {
-        print("loadImage: \(urlString)")
-        guard let url = URL(string: urlString) else { return }
+    init(imageURL: String, loadNew: Bool) {
+            let cache = URLCache.shared
+            let request = URLRequest(url: URL(string: imageURL)!, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 60.0)
         
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data else { return }
-            DispatchQueue.main.async {
-                print("we have loaded an image")
-                self.image = UIImage(data: data) ?? UIImage()
+        let data = cache.cachedResponse(for: request)?.data
+        
+            if data != nil && !loadNew {
+                print("got image from cache")
+                self.imageData = data!
+            } else {
+                URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+                    if let data = data, let response = response {
+                    let cachedData = CachedURLResponse(response: response, data: data)
+                                        cache.storeCachedResponse(cachedData, for: request)
+                        DispatchQueue.main.async {
+                            print("downloaded from internet")
+                            self.imageData = data
+                        }
+                    }
+                }).resume()
             }
         }
-        task.resume()
+    
+    func loadImage() {
+        
     }
 }

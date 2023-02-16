@@ -15,38 +15,41 @@ struct MenuDetailView: View {
     
     var body: some View {
         ZStack {
-            VStack {
-                ItemImageView(urlString: menuItem.imageString ?? "")
-                                    .padding()
-                Text(menuItem.description ?? "")
-                    .multilineTextAlignment(.leading)
-                    .font(.system(size: 20))
-                    .padding()
-                Text("label.itemDetail.ideal.body")
-                    .font(.system(size: 16))
-                    .multilineTextAlignment(.leading)
-                    .padding()
-                Text(MenuController.shared.getDetailPriceString(price: menuItem.price))
-                    .padding()
-                Button(action: {
-                    self.showingAlert = true
-                }, label: {
-                    Text("label.itemDetail.button.add.title")
-                        .frame(maxWidth: .infinity)
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack {
+                    Spacer()
+                    DetailImageView(menuItem.imageString ?? "", loadNow: true)
+                        .frame(width: 300)
                         .padding()
-                        .foregroundColor(Constants.colours.buttonTextColour)
-                        .background(Constants.colours.buttonBgColour)
-                        .cornerRadius(Constants.numbers.cornerRadius)
-                })
-                    .padding()
-                    .alert(isPresented: $showingAlert, content: {
-                        Alert(title: Text("alert.addItem.title"), message: Text(MenuController.shared.getAddItemAlertString(menuItem: menuItem)), primaryButton: .default(Text("alert.addItem.continue"), action: {
-                            self.showingAlert = false
-                        }), secondaryButton: .default(Text("alert.addItem.basket"), action: {
-                            print("load basket view")
-                        }))
+                    Text(menuItem.description ?? "")
+                        .multilineTextAlignment(.leading)
+                        .font(.system(size: 20))
+                        .padding()
+                    Text("label.itemDetail.ideal.body")
+                        .font(.system(size: 16))
+                        .multilineTextAlignment(.leading)
+                        .padding()
+                    Text(MenuController.shared.getDetailPriceString(price: menuItem.price))
+                        .padding()
+                    Button(action: {
+                        self.showingAlert = true
+                    }, label: {
+                        Text("label.itemDetail.button.add.title")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(Constants.colours.buttonTextColour)
+                            .background(Constants.colours.buttonBgColour)
+                            .cornerRadius(Constants.numbers.cornerRadius)
                     })
+                        .padding()
+                        .alert(isPresented: $showingAlert, content: {
+                            Alert(title: Text("alert.addItem.title"), message: Text(MenuController.shared.getAddItemAlertString(menuItem: menuItem)), dismissButton: .default(Text("alert.addItem.continue"), action: {
+                                self.showingAlert = false
+                            }))
+                        })
+                }
             }
+            
         }
     }
 }
