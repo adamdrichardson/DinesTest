@@ -16,6 +16,12 @@
 		029EFDD8299D40A600177892 /* DinesTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDD7299D40A600177892 /* DinesTestTests.swift */; };
 		029EFDE2299D40A700177892 /* DinesTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDE1299D40A700177892 /* DinesTestUITests.swift */; };
 		029EFDE4299D40A700177892 /* DinesTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDE3299D40A700177892 /* DinesTestUITestsLaunchTests.swift */; };
+		029EFDF5299D509D00177892 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDF4299D509D00177892 /* ApiHandler.swift */; };
+		029EFDF6299D509D00177892 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDF4299D509D00177892 /* ApiHandler.swift */; };
+		029EFDF9299D51DF00177892 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDF8299D51DF00177892 /* Constants.swift */; };
+		029EFDFA299D51DF00177892 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDF8299D51DF00177892 /* Constants.swift */; };
+		029EFDFD299DA84100177892 /* MenuSelectionEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDFC299DA84100177892 /* MenuSelectionEnum.swift */; };
+		029EFDFE299DA84100177892 /* MenuSelectionEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDFC299DA84100177892 /* MenuSelectionEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,9 @@
 		029EFDDD299D40A700177892 /* DinesTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DinesTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		029EFDE1299D40A700177892 /* DinesTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinesTestUITests.swift; sourceTree = "<group>"; };
 		029EFDE3299D40A700177892 /* DinesTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinesTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		029EFDF4299D509D00177892 /* ApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
+		029EFDF8299D51DF00177892 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		029EFDFC299DA84100177892 /* MenuSelectionEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +107,14 @@
 		029EFDC0299D40A000177892 /* DinesTest */ = {
 			isa = PBXGroup;
 			children = (
+				029EFDFB299DA80A00177892 /* Enums */,
+				029EFDF7299D518A00177892 /* Constants */,
+				029EFDF3299D42C300177892 /* Controllers */,
+				029EFDF2299D429300177892 /* Local_Data */,
+				029EFDF1299D428300177892 /* Data_Models */,
+				029EFDF0299D427B00177892 /* UI */,
 				029EFDC1299D40A000177892 /* DinesTestApp.swift */,
-				029EFDC3299D40A000177892 /* ContentView.swift */,
 				029EFDC5299D40A600177892 /* Assets.xcassets */,
-				029EFDCA299D40A600177892 /* Persistence.swift */,
-				029EFDCC299D40A600177892 /* DinesTest.xcdatamodeld */,
 				029EFDC7299D40A600177892 /* Preview Content */,
 			);
 			path = DinesTest;
@@ -131,6 +143,54 @@
 				029EFDE3299D40A700177892 /* DinesTestUITestsLaunchTests.swift */,
 			);
 			path = DinesTestUITests;
+			sourceTree = "<group>";
+		};
+		029EFDF0299D427B00177892 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				029EFDC3299D40A000177892 /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		029EFDF1299D428300177892 /* Data_Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data_Models;
+			sourceTree = "<group>";
+		};
+		029EFDF2299D429300177892 /* Local_Data */ = {
+			isa = PBXGroup;
+			children = (
+				029EFDCA299D40A600177892 /* Persistence.swift */,
+				029EFDCC299D40A600177892 /* DinesTest.xcdatamodeld */,
+			);
+			path = Local_Data;
+			sourceTree = "<group>";
+		};
+		029EFDF3299D42C300177892 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				029EFDF4299D509D00177892 /* ApiHandler.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		029EFDF7299D518A00177892 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				029EFDF8299D51DF00177892 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		029EFDFB299DA80A00177892 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				029EFDFC299DA84100177892 /* MenuSelectionEnum.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +325,11 @@
 			files = (
 				029EFDCB299D40A600177892 /* Persistence.swift in Sources */,
 				029EFDCE299D40A600177892 /* DinesTest.xcdatamodeld in Sources */,
+				029EFDFD299DA84100177892 /* MenuSelectionEnum.swift in Sources */,
+				029EFDF5299D509D00177892 /* ApiHandler.swift in Sources */,
 				029EFDC4299D40A000177892 /* ContentView.swift in Sources */,
 				029EFDC2299D40A000177892 /* DinesTestApp.swift in Sources */,
+				029EFDF9299D51DF00177892 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +338,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				029EFDD8299D40A600177892 /* DinesTestTests.swift in Sources */,
+				029EFDF6299D509D00177892 /* ApiHandler.swift in Sources */,
+				029EFDFE299DA84100177892 /* MenuSelectionEnum.swift in Sources */,
+				029EFDFA299D51DF00177892 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +501,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,6 +531,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
