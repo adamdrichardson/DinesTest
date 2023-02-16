@@ -53,4 +53,21 @@ struct PersistenceController {
             }
         })
     }
+    
+    func getManagedContext() -> NSManagedObjectContext {
+        return container.viewContext
+    }
+    
+    func saveContext() {
+        let context = self.getManagedContext()
+        
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Core Data error: \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
 }
