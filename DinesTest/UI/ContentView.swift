@@ -11,23 +11,33 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    @State private var tabSelection = 0
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
-                }
+        TabView(selection: $tabSelection) {
+            NavigationView {
+                MenuRootView()
+                    .navigationTitle("label.menuView.title")
             }
+            .tabItem{
+                Image(systemName: "menucard")
+                Text("label.menuView.title")
+            }
+            .tag(0)
             
+            BasketView()
+                .tabItem {
+                    Image(systemName: "basket")
+                    Text("label.basketView.title")
+                }
+                .tag(1)
+            
+            OrderHistoryView()
+                .tabItem {
+                    Image(systemName: "list.clipboard")
+                    Text("label.orderView.title")
+                }
+                .tag(2)
         }
     }
 

@@ -6,3 +6,6 @@
   
 */
 "api.error" = "There was an error with the API: ";
+"label.menuView.title" = "Menu";
+"label.basketView.title" = "Basket";
+"label.orderView.title" = "Order History";
