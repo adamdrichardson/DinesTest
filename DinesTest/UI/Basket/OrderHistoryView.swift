@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct OrderHistoryView: View {
+    
+    @FetchRequest(entity: OrderItem.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \OrderItem.timeStamp, ascending: false)]
+    ) var items: FetchedResults<OrderItem>
+    
     var body: some View {
-        Text("Order History View")
+        ZStack {
+            VStack {
+                List {
+                    ForEach(items, id: \.id) {
+                        OrderHistoryRowView(order: $0)
+                    }
+                }
+                if items.count == 0 {
+                    Spacer()
+                    Text("label.order.empty")
+                        .multilineTextAlignment(.leading)
+                        .padding()
+                    Spacer()
+                }
+            }
+        }
     }
 }
 

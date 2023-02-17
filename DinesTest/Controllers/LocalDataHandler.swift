@@ -90,6 +90,7 @@ class LocalDataHandler {
     }
     
     func emptyBasket() {
+        print("emptyBasket")
         let fetchRequest = BasketItem.fetchRequest()
         
         moc = self.getManagedContext()
@@ -108,13 +109,17 @@ class LocalDataHandler {
     }
     
     func saveOrder() {
+        
+        print("saveOrder")
         moc = self.getManagedContext()
         
-        let orderItem = OrderItem()
+        let orderItem = OrderItem(context: moc)
         orderItem.id = UUID()
         orderItem.itemTotal = Int16(self.getBasketQuantity())
         orderItem.totalPrice = self.getBasketTotal()
         orderItem.timeStamp = Date()
+        
+        print("Order item to save: \(orderItem)")
         
         self.saveContext()
         

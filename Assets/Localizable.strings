@@ -36,3 +36,4 @@
 "label.order.date.title" = "Order Date: ";
 "label.order.quantity.title" = "Number of items: ";
 "label.order.price.title" = "Total order price: £";
+"label.order.empty" = "There are no previous orders.";
