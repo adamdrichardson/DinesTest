@@ -19,7 +19,7 @@
 "alert.addItem.body" = " was added to your basket at a cost of: ";
 "alert.addItem.continue" = "Continue shopping";
 "alert.addItem.basket" = "Go to my Basket";
-"label.basket.button.checkout" = "CHeckout";
+"label.basket.button.checkout" = "Checkout";
 "label.basket.total" = "Total Price: £";
 "label.basket.title" = "Basket";
 "label.order.title" = "Order History";
