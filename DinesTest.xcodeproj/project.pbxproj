@@ -62,6 +62,10 @@
 		029EFE42299EA13B00177892 /* BasketRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE40299EA13B00177892 /* BasketRowView.swift */; };
 		029EFE44299EC24A00177892 /* DateFormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE43299EC24900177892 /* DateFormatHelper.swift */; };
 		029EFE45299EC24A00177892 /* DateFormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE43299EC24900177892 /* DateFormatHelper.swift */; };
+		029EFE47299F8D6600177892 /* OrderHistoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE46299F8D6500177892 /* OrderHistoryRowView.swift */; };
+		029EFE48299F8D6600177892 /* OrderHistoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE46299F8D6500177892 /* OrderHistoryRowView.swift */; };
+		029EFE4A299F8E4300177892 /* OrderHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE49299F8E4300177892 /* OrderHistoryController.swift */; };
+		029EFE4B299F8E4300177892 /* OrderHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE49299F8E4300177892 /* OrderHistoryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +121,8 @@
 		029EFE3D299E9F5900177892 /* BasketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketController.swift; sourceTree = "<group>"; };
 		029EFE40299EA13B00177892 /* BasketRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRowView.swift; sourceTree = "<group>"; };
 		029EFE43299EC24900177892 /* DateFormatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatHelper.swift; sourceTree = "<group>"; };
+		029EFE46299F8D6500177892 /* OrderHistoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryRowView.swift; sourceTree = "<group>"; };
+		029EFE49299F8E4300177892 /* OrderHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +252,7 @@
 				029EFE3A299E9BA200177892 /* MathsHelper.swift */,
 				029EFE3D299E9F5900177892 /* BasketController.swift */,
 				029EFE43299EC24900177892 /* DateFormatHelper.swift */,
+				029EFE49299F8E4300177892 /* OrderHistoryController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -300,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				029EFE0F299DD5C400177892 /* OrderHistoryView.swift */,
+				029EFE46299F8D6500177892 /* OrderHistoryRowView.swift */,
 			);
 			path = Order_History;
 			sourceTree = "<group>";
@@ -446,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				029EFE0D299DD5B500177892 /* BasketView.swift in Sources */,
+				029EFE4A299F8E4300177892 /* OrderHistoryController.swift in Sources */,
 				029EFDCB299D40A600177892 /* Persistence.swift in Sources */,
 				029EFE2F299E6CFC00177892 /* MenuDetailView.swift in Sources */,
 				029EFE07299DD56F00177892 /* MenuRootView.swift in Sources */,
@@ -463,6 +472,7 @@
 				029EFE3E299E9F5900177892 /* BasketController.swift in Sources */,
 				029EFDF5299D509D00177892 /* ApiHandler.swift in Sources */,
 				029EFDC4299D40A000177892 /* ContentView.swift in Sources */,
+				029EFE47299F8D6600177892 /* OrderHistoryRowView.swift in Sources */,
 				029EFE1C299E3A0400177892 /* MenuController.swift in Sources */,
 				029EFE16299E374E00177892 /* MenuListView.swift in Sources */,
 				029EFE44299EC24A00177892 /* DateFormatHelper.swift in Sources */,
@@ -499,8 +509,10 @@
 				029EFE0E299DD5B500177892 /* BasketView.swift in Sources */,
 				029EFE45299EC24A00177892 /* DateFormatHelper.swift in Sources */,
 				029EFDFA299D51DF00177892 /* Constants.swift in Sources */,
+				029EFE48299F8D6600177892 /* OrderHistoryRowView.swift in Sources */,
 				029EFE33299E842800177892 /* DetailImageView.swift in Sources */,
 				029EFE36299E98C900177892 /* LocalDataHandler.swift in Sources */,
+				029EFE4B299F8E4300177892 /* OrderHistoryController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

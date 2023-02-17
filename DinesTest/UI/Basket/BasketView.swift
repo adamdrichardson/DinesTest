@@ -66,7 +66,7 @@ struct BasketView: View {
         
         if items.count > 0 {
             return Alert(title: Text("alert.basket.checkout.title") , message: Text(BasketController.shared.getBasketAlertBodyString(items: items)), primaryButton: .default(Text("alert.basket.checkout.button.confirm"), action: {
-                    
+                LocalDataHandler.shared.saveOrder()
             }), secondaryButton: .destructive(Text("alert.basket.checkout.button.cancel")))
         } else {
             return Alert(title: Text("alert.basket.error.title"), message: Text("alert.basket.error.body"), dismissButton: .default(Text("alert.basket.error.button.ok"), action: {

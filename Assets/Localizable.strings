@@ -33,3 +33,6 @@
 "alert.basket.checkout.button.confirm" = "Complete order";
 "alert.basket.checkout.button.cancel" = "Cancel";
 "label.basket.empty" = "There are no items in your basket.";
+"label.order.date.title" = "Order Date: ";
+"label.order.quantity.title" = "Number of items: ";
+"label.order.price.title" = "Total order price: £";
