@@ -41,3 +41,40 @@ Additionally the 7th generation iPod Touch (released May 2019) will also be supp
 For the purpose of this exercise I have decided to use a simple menu API provided by a 3rd party (free-food-menus-api), I have selected the best foods filter to present a reasonable sized basic menu
 
 The API can be found here: https://free-food-menus-api-production.up.railway.app
+
+## Testing decisions
+
+I have opted to use XCode's in built unit tests, these are perfectly fit for purpose for iOS apps and especially in this scenario. There are alternatives such as Appium but these only really have benefits when you have dedicate QA Engineers who are writing the tests and when the tests are going to be used accross different platforms.
+
+For UI testing I have gone with basic tests using XCode's built in UI testing. Again there are alternatives often based on Selenium but for this scenario XCodes own tests will fit the requirements. 
+
+## UI decisions
+
+I have selected to develop the UI using SwiftUI as this is a simple interface and SwiftUI scales well accross multiple devices and screen sizes. Additionally SwiftUI is ideal for creating quick prototype or sample apps such as this. With no existing UIKit or Storyboard views to integrate with this seemed like the most pragmatic approach to this task.
+
+## Data storage decisions
+
+I have selected to store the data using Core Data as this is native to iOS so no need to import any 3rd party libraries. It is also fast enough and flexible enough for the selected task.
+
+## 3rd party SDKs
+
+I have decided to code this app using only the native SDK, while 3rd party SDKs such as Firebase or AlamoFire could have been used I decided to keep this app simple and avoid the potential frustrations of importing Cocoapods or Swift Packages.
+
+## Next Steps
+
+If this app was to be taken into a production standard app a number of steps would need to be taken. Some of the next steps I would take are the following:
+
+- Store the users order history on a remote service (most basic would be iCloud but it could also be the Dines backend)
+- Integrate with a multi level API so that the menu categories are driven by the API and not hard coded
+- Improve the UI layout (better colours, font selection, logo's etc)
+- Integration with Crashlytics or some other form of Crash reporting
+- Integration with an analytics platform to understand how the app is being used to help future developments and improvements
+- Integration with an API so that the order actually goes some where and is not just stored on the device
+- Integration with Payment service so that payments can be processed for the order
+- Ability to add a tip (present value of 10% with the option to customise)
+- Pull to refresh on the menu
+- Local caching of the menu (potentially storing in Core Data - although offline usage is not a great use case as if they are offline they cannot place an order)
+- User registration and login (potentially using a service such as Firebase or using Dines own authentication)
+- Integration with biometrics for quick login and authentication at checkout
+- Build and test automation using Fastlane or XCode Cloud
+- Add more comprehensive Unit Test and UI Tests
