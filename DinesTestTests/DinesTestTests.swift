@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import CoreData
 @testable import DinesTest
 
 class DinesTestTests: XCTestCase {
@@ -63,7 +64,82 @@ class DinesTestTests: XCTestCase {
         let testString = NSLocalizedString("label.order.date.title", comment: "")
         
         let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy - HH:MM"
+        let dateString = dateFormatter.string(from: testDate)
         
+        let expectedResult = testString + dateString
+        
+        let result = OrderHistoryController.shared.getOrderDateString(date: testDate)
+        
+        XCTAssertTrue(expectedResult == result)
         
     }
+    
+    func testGetDateAsString() throws {
+        let testDate = Date()
+                
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy - HH:MM"
+        let dateString = dateFormatter.string(from: testDate)
+        
+        let result = DateFormatHelper.shared.getDateAsString(date: testDate)
+        
+        XCTAssertTrue(dateString == result)
+    }
+    
+    func testAddBasketItem() throws {
+        let context = TestCoreDataStack().persistentContainer.newBackgroundContext()
+        expectation(forNotification: .NSManagedObjectContextDidSave, object: context, handler: { _ in
+            return true
+        })
+        let testBasketItem = BasketItem(context: context)
+        testBasketItem.id = UUID()
+        testBasketItem.quantity = 1
+        testBasketItem.totalPrice = 5.99
+        testBasketItem.name = "Test Item"
+        testBasketItem.itemId = "123"
+        testBasketItem.itemPrice = 5.99
+        
+        try! context.save()
+        waitForExpectations(timeout: 2.0, handler: { error in
+            XCTAssertNil(error, "Save did not occur")
+            
+        })
+    }
+    
+    func testAddOrderItem() throws {
+        let context = TestCoreDataStack().persistentContainer.newBackgroundContext()
+        expectation(forNotification: .NSManagedObjectContextDidSave, object: context, handler: { _ in
+            return true
+        })
+        
+        let testOrderItem = OrderItem(context: context)
+        testOrderItem.id = UUID()
+        testOrderItem.totalPrice = 9.99
+        testOrderItem.timeStamp = Date()
+        testOrderItem.itemTotal = 1
+        
+        try! context.save()
+        waitForExpectations(timeout: 2.0, handler: { error in
+            XCTAssertNil(error, "Save did not occur")
+            
+        })
+    }
+}
+
+class TestCoreDataStack: NSObject {
+    lazy var persistentContainer: NSPersistentContainer = {
+        let description = NSPersistentStoreDescription()
+        description.url = URL(fileURLWithPath: "/dev/null")
+        let container = NSPersistentContainer(name: "DinesTest")
+        container.persistentStoreDescriptions = [description]
+        container.loadPersistentStores { _, error in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        }
+        return container
+    }()
+    
+    
 }
