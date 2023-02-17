@@ -26,19 +26,27 @@ struct ContentView: View {
             }
             .tag(0)
             
-            BasketView()
-                .tabItem {
-                    Image(systemName: "cart")
-                    Text("label.basketView.title")
-                }
-                .tag(1)
+            NavigationView {
+                BasketView()
+                    .navigationTitle("label.basket.title")
+            }
+            .navigationViewStyle(.stack)
+            .tabItem {
+                Image(systemName: "cart")
+                Text("label.basketView.title")
+            }
+            .tag(1)
             
-            OrderHistoryView()
-                .tabItem {
-                    Image(systemName: "list.star")
-                    Text("label.orderView.title")
-                }
-                .tag(2)
+            NavigationView {
+                OrderHistoryView()
+                    .navigationTitle("label.order.title")
+            }
+            .navigationViewStyle(.stack)
+            .tabItem {
+                Image(systemName: "list.star")
+                Text("label.orderView.title")
+            }
+            .tag(2)
         }
     }
 

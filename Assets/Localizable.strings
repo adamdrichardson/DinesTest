@@ -21,3 +21,15 @@
 "alert.addItem.basket" = "Go to my Basket";
 "label.basket.button.checkout" = "CHeckout";
 "label.basket.total" = "Total Price: £";
+"label.basket.title" = "Basket";
+"label.order.title" = "Order History";
+"alert.basket.checkout.title" = "Checkout";
+"alert.basket.checkout.body" = "Would you like to checkout now? Your basket contains ";
+"alert.basket.checkout.body.2.single" = " item costing a total of £";
+"alert.basket.checkout.body.2.multi" = " items costing a total of £";
+"alert.basket.error.title" = "Error";
+"alert.basket.error.body" = "The basket is currently empty. Please add some items before checking out";
+"alert.basket.error.button.ok" = "OK";
+"alert.basket.checkout.button.confirm" = "Complete order";
+"alert.basket.checkout.button.cancel" = "Cancel";
+"label.basket.empty" = "There are no items in your basket.";

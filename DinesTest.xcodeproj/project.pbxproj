@@ -60,6 +60,8 @@
 		029EFE3F299E9F5900177892 /* BasketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE3D299E9F5900177892 /* BasketController.swift */; };
 		029EFE41299EA13B00177892 /* BasketRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE40299EA13B00177892 /* BasketRowView.swift */; };
 		029EFE42299EA13B00177892 /* BasketRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE40299EA13B00177892 /* BasketRowView.swift */; };
+		029EFE44299EC24A00177892 /* DateFormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE43299EC24900177892 /* DateFormatHelper.swift */; };
+		029EFE45299EC24A00177892 /* DateFormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE43299EC24900177892 /* DateFormatHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,7 @@
 		029EFE3A299E9BA200177892 /* MathsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathsHelper.swift; sourceTree = "<group>"; };
 		029EFE3D299E9F5900177892 /* BasketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketController.swift; sourceTree = "<group>"; };
 		029EFE40299EA13B00177892 /* BasketRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRowView.swift; sourceTree = "<group>"; };
+		029EFE43299EC24900177892 /* DateFormatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +245,7 @@
 				029EFE34299E98C700177892 /* LocalDataHandler.swift */,
 				029EFE3A299E9BA200177892 /* MathsHelper.swift */,
 				029EFE3D299E9F5900177892 /* BasketController.swift */,
+				029EFE43299EC24900177892 /* DateFormatHelper.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -461,6 +465,7 @@
 				029EFDC4299D40A000177892 /* ContentView.swift in Sources */,
 				029EFE1C299E3A0400177892 /* MenuController.swift in Sources */,
 				029EFE16299E374E00177892 /* MenuListView.swift in Sources */,
+				029EFE44299EC24A00177892 /* DateFormatHelper.swift in Sources */,
 				029EFE41299EA13B00177892 /* BasketRowView.swift in Sources */,
 				029EFDC2299D40A000177892 /* DinesTestApp.swift in Sources */,
 				029EFDF9299D51DF00177892 /* Constants.swift in Sources */,
@@ -492,6 +497,7 @@
 				029EFE2D299E505000177892 /* ItemImageView.swift in Sources */,
 				029EFE1A299E38CE00177892 /* MenuRootButtonView.swift in Sources */,
 				029EFE0E299DD5B500177892 /* BasketView.swift in Sources */,
+				029EFE45299EC24A00177892 /* DateFormatHelper.swift in Sources */,
 				029EFDFA299D51DF00177892 /* Constants.swift in Sources */,
 				029EFE33299E842800177892 /* DetailImageView.swift in Sources */,
 				029EFE36299E98C900177892 /* LocalDataHandler.swift in Sources */,
