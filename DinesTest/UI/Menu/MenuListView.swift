@@ -9,8 +9,14 @@ import SwiftUI
 
 struct MenuListView: View {
     
+    let errorPub = NotificationCenter.default.publisher(for: Constants.notificationNames.apiErrorNotification)
+    
+    
     var menuOption: MenuSelection
     @StateObject private var menu: MenuVM
+    
+    @State private var isShowingError = false
+    @State private var errorMsg = ""
     
     public init(menuSelected: MenuSelection) {
         self._menu = StateObject(wrappedValue: MenuVM(menuSelection: menuSelected))
@@ -27,6 +33,17 @@ struct MenuListView: View {
             
         }
         .navigationBarTitle(MenuController.shared.getRootMenuTitle(menuSelected: menuOption))
+        .onReceive(errorPub, perform: { notification in
+            print("error notification received")
+            self.isShowingError = true
+            if let info = notification.userInfo! as? [String: String] {
+                print("info: \(info)")
+                errorMsg = info["error"]!
+            }
+        })
+        .alert(isPresented: $isShowingError, content: {
+            Alert(title: Text("alert.api.error.title"), message: Text(errorMsg), dismissButton: .destructive(Text("alert.api.error.button.ok")))
+        })
     }
 }
 

@@ -20,6 +20,8 @@ class MenuVM: ObservableObject {
             if let errorMessage = menuResponse.errorString {
                 //TODO: Do something with the error message
                 print("there was an error: \(errorMessage)")
+                let errorMsgDict:[String : String] = ["error": errorMessage]
+                NotificationCenter.default.post(name: Constants.notificationNames.apiErrorNotification, object: nil, userInfo: errorMsgDict)
             }
             
             if let menuItems = menuResponse.menutItems {

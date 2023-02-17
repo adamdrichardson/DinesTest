@@ -45,5 +45,25 @@ class DinesTestTests: XCTestCase {
         
         XCTAssertTrue(result == expectedResult)
     }
+    
+    func testItemTotalPrice() throws {
+        let expectedTotal = Double(5 * 5.99)
+        
+        let quantity = 5
+        let price = 5.99
+        
+        let result = MathsHelper.shared.getItemTotalPrice(quantity: quantity, price: price)
+        
+        XCTAssertTrue(expectedTotal == result)
+    }
 
+    func testGetOrderDateString() throws {
+        let testDate = Date()
+        
+        let testString = NSLocalizedString("label.order.date.title", comment: "")
+        
+        let dateFormatter = DateFormatter()
+        
+        
+    }
 }

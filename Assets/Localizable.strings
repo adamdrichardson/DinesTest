@@ -37,3 +37,5 @@
 "label.order.quantity.title" = "Number of items: ";
 "label.order.price.title" = "Total order price: £";
 "label.order.empty" = "There are no previous orders.";
+"alert.api.error.title" = "Error loading Menu";
+"alert.api.error.button.ok" = "OK";

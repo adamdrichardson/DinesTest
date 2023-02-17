@@ -66,6 +66,8 @@
 		029EFE48299F8D6600177892 /* OrderHistoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE46299F8D6500177892 /* OrderHistoryRowView.swift */; };
 		029EFE4A299F8E4300177892 /* OrderHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE49299F8E4300177892 /* OrderHistoryController.swift */; };
 		029EFE4B299F8E4300177892 /* OrderHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFE49299F8E4300177892 /* OrderHistoryController.swift */; };
+		029EFE4C299FB64200177892 /* DinesTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDCC299D40A600177892 /* DinesTest.xcdatamodeld */; };
+		029EFE4D299FB65800177892 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFDCA299D40A600177892 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -497,8 +499,10 @@
 				029EFE1D299E3A0400177892 /* MenuController.swift in Sources */,
 				029EFE42299EA13B00177892 /* BasketRowView.swift in Sources */,
 				029EFE11299DD5C400177892 /* OrderHistoryView.swift in Sources */,
+				029EFE4D299FB65800177892 /* Persistence.swift in Sources */,
 				029EFE29299E4F9D00177892 /* ImageLoader.swift in Sources */,
 				029EFDF6299D509D00177892 /* ApiHandler.swift in Sources */,
+				029EFE4C299FB64200177892 /* DinesTest.xcdatamodeld in Sources */,
 				029EFDFE299DA84100177892 /* MenuSelectionEnum.swift in Sources */,
 				029EFE23299E49FC00177892 /* MenuListItemView.swift in Sources */,
 				029EFE20299E3AA200177892 /* MenuOptionDetailsObject.swift in Sources */,

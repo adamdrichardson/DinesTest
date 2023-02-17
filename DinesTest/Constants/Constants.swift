@@ -26,4 +26,8 @@ struct Constants {
         static let buttonBgColour = Color.blue
         static let buttonTextColour = Color.white
     }
+    
+    struct notificationNames {
+        static let apiErrorNotification = Notification.Name("apiErrorNotification")
+    }
 }
