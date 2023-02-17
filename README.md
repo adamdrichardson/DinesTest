@@ -77,3 +77,4 @@ If this app was to be taken into a production standard app a number of steps wou
 - User registration and login (potentially using a service such as Firebase or using Dines own authentication)
 - Integration with biometrics for quick login and authentication at checkout
 - Build and test automation using Fastlane or XCode Cloud
+- Add more comprehensive Unit Test and UI Tests
